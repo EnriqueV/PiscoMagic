@@ -1,0 +1,29 @@
+<ion-header>
+ <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Photos</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only [navPush]="'NotificationPage'">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button icon-only  [navPush]="'ProfilePage'">
+          <ion-icon name="person"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+      <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <mainlist></mainlist>
+    <ion-fab bottom right>
+       <button ion-fab color="primary" (click)="presentcategory($event)"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

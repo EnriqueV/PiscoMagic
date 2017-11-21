@@ -1,0 +1,13 @@
+page-moreoption {
+     .list-md{
+        margin-bottom: 0;
+        .item-md{
+            color: color($colors,dark);
+            padding: 0;
+            font-size: 1.4rem;
+            .item-inner{
+                padding-left: 16px;
+            }
+        }
+    }
+}

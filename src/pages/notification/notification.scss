@@ -1,0 +1,44 @@
+page-notification {
+   .scroll-content{
+       padding-left: 10px !important;
+   } 
+  .notif-content{
+      width: calc(100% - 120px);
+      display: inline-block;
+      float: left;
+        .item-md{
+            padding: 0; 
+            [item-end]{
+                margin: 0 0 0 10px;
+            }
+        }
+        .card-content{
+        padding: 0 !important;
+        &:after{
+        display: none;    
+        }    
+            p {
+            font-weight: normal;
+            max-height: 42px;
+            overflow: hidden;
+            color: color($colors,lightColor);
+            }
+        }
+  }
+  .main-list{
+  border-bottom: 1px solid  rgba(color($colors,lightColor),.7)  !important;   
+  padding: 5px 0;
+        .main-img {
+        position: relative;
+        height: 88px;
+        width:110px;
+        display: inline-block;
+        margin-left:5px;
+        margin-top: 5px;
+        margin-bottom: 0;
+            img{
+                height:88px;
+            }
+        }
+  }
+}

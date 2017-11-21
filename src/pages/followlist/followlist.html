@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-navbar color="light">
+    <ion-title>Follow people</ion-title>
+    </ion-navbar> 
+</ion-header>
+
+<ion-content padding>
+    <ion-list  class="follow-list">
+      <ion-item  *ngFor="let item of items">
+        <ion-avatar item-start>
+            <img src="{{item.img}}">
+        </ion-avatar>
+        <div [navPush]="'FollowpeoplePage'">
+            <h2>Justin Timberlake</h2>
+            <p>Breaking technology news and analysis.</p>
+        </div>
+        <button ion-button icon-only item-end class="add-people">
+            <ion-icon name="person-add"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header class="light-header">
+    <ion-navbar color="light">
+    </ion-navbar> 
+</ion-header>
+
+
+<ion-content class="profile-page">
+    <div class="profile-content" text-center>
+        <div class="img-profile" padding> 
+            <img src="assets/images/profile2.png">
+            <h3 no-margin>Jobs Lives</h3>
+            <p color="lightColor" no-margin>@Justin Timberlake</p>
+            <p class="short-descrip" color="lightColor" no-margin>Breaking technology news and analysis. The number one guide for all things tech.</p>
+        </div>
+        <ion-row class="follow-num" margin-bottom>
+            <ion-col col-6 no-padding>
+                <p>15<span>Magazines</span></p>
+            </ion-col>
+            <ion-col col-6 no-padding>
+                <p>761.2k<span>Following</span></p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="profile-card"  padding> 
+        
+        <h3>Latest flips</h3>  
+        <ion-card *ngFor="let item of items" no-margin>
+            <div class="card-img" [ngClass]="{'video-img':item.type=='video'}">
+              <img  src="{{item.img}}"/>
+              <img class="play-icon" src="assets/images/play.png" *ngIf="item.type=='video'"/>
+            </div>
+            <ion-card-content no-padding>
+            <p>Wait a minute. Wait a minute, Doc. Uhhh.</p>
+            </ion-card-content> 
+        </ion-card>
+
+        <div class="video">
+            <h3 margin-top>Video</h3>  
+            <ion-card *ngFor="let item of items" no-margin>
+                <div class="card-img video-img">
+                <img  src="{{item.img}}"/>
+                <img class="play-icon" src="assets/images/play.png"/>
+                </div>
+                <ion-card-content no-padding>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh.</p>
+                </ion-card-content> 
+            </ion-card>
+        </div>  
+
+    </div> 
+    <ion-fab bottom right>
+         <button ion-fab color="primary"><ion-icon name="person-add"></ion-icon></button>
+    </ion-fab>
+</ion-content>

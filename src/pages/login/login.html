@@ -1,0 +1,40 @@
+
+<ion-content padding class="mainbg">
+    <div class="Loginpage">
+          <form class="app-form" text-center>
+            <img src="assets/images/logo.PNG" alt="">
+            <ion-list>
+                <ion-item no-padding>
+                  <ion-icon name="ios-mail" color="danger" item-start></ion-icon>
+                  <ion-input type="text" placeholder="Correo"  [(ngModel)]="username" name="username"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                  <ion-icon name="md-lock" color="danger" item-start></ion-icon>
+                  <ion-input type="password" placeholder="Contraseña"  [(ngModel)]="password" name="password"></ion-input>
+                </ion-item>
+            </ion-list>
+            <button ion-button block color="danger"  (click)="submit()">Entrar</button>
+            <p  [navPush]="'RegisterPage'" no-margin>No tienes una cuenta? Crea una</p>
+           <!-- <p (click)="forgotPassword()">Forgot password?</p>-->
+
+            <div class="option-sign">
+            <p>Siguenos en</p>
+            <ion-grid no-padding>
+              <ion-row padding-bottom>
+                <ion-col width-33>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </ion-col>
+                <ion-col width-33>
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </ion-col>
+                <!--<ion-col width-33>
+                  <ion-icon name="logo-googleplus"></ion-icon>
+                </ion-col>-->
+              </ion-row>
+            </ion-grid>
+          </div>
+
+          </form>
+    </div>
+</ion-content>

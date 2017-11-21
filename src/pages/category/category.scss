@@ -1,0 +1,19 @@
+page-category {
+    .list-md{
+    background: transparent;
+    margin-bottom: 0;
+        .item-md{
+        background: transparent;
+        color: color($colors,light);
+        padding: 0;
+        font-size: 1.4rem;
+            .item-inner{
+            padding-left: 16px;
+            }
+        }
+    }
+}
+
+.category-popover.popover-md .popover-content{
+    background: color($colors,primary) !important;
+}

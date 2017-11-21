@@ -1,0 +1,39 @@
+<ion-header class="light-header">
+    <ion-navbar color="light">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only  [navPush]="'FollowlistPage'">
+
+        </button>
+        <button ion-button icon-only (click)="changeData()">
+            <ion-icon name="create" *ngIf="isDisabled"></ion-icon>
+            <ion-icon name="checkmark" *ngIf="!isDisabled" class="save_btn"></ion-icon>
+        </button>
+    </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="profile-page">
+    <div class="profile-content" text-center>
+        <div class="img-profile" padding>
+            <img src="assets/images/profile.png">
+            <ion-input placeholder="Username" type="text" value="Justin Timberlake" disabled="{{isDisabled}}" text-center></ion-input>
+            <ion-input placeholder="E-mail" type="email" value="@Justin Timberlake" disabled="{{isDisabled}}" text-center></ion-input>
+            <p class="short-descrip" color="lightColor" no-margin>Breaking technology news and analysis. The number one guide for all things tech.</p>
+        </div>
+        <!--<ion-row class="follow-num" margin-bottom>
+            <ion-col col-6 no-padding>
+                <p>200<span>Followers</span></p>
+            </ion-col>
+            <ion-col col-6 no-padding>
+                <p>250<span>Following</span></p>
+            </ion-col>
+        </ion-row> -->
+    </div>
+
+</ion-content>
+

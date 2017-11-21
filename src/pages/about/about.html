@@ -1,0 +1,36 @@
+<ion-header>
+ <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Radio</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding  class="back">
+
+    <div padding>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="kittens">
+            Radio 1
+          </ion-segment-button>
+          <ion-segment-button value="puppies">
+          Radio 2
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'puppies'">
+
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'kittens'">
+
+        </ion-list>
+      </div>
+
+</ion-content>

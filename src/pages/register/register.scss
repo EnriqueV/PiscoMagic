@@ -1,0 +1,39 @@
+page-register {
+    .mainbg{
+        @include bgGradient;
+    }
+    .app-form{
+            .user-name{
+            display: flex;
+                .item-md{
+                width: 35%;
+                &:nth-of-type(1){
+                margin-right: 10px;
+                width: 65%;
+                }    
+                }
+            }
+            .country-code{
+            display: flex;
+                .item-md{
+                &:nth-of-type(1){
+                width:70px;
+                margin-right: 10px;
+                }
+                 &:nth-of-type(2){
+                width: calc(100% - 70px);    
+                }    
+                }
+            }
+            
+            .item-input{
+            border: none !important;
+                .item-inner{
+                border-bottom: 1px solid rgba(color($colors,primary),.5) !important;
+                }
+            }
+            .option-sign {
+            margin-top: 10px;
+            }
+        } 
+}

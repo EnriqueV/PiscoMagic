@@ -1,25 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { BrowserModule } from '@angular/platform-browser';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { SharedPageModule } from '../pages/shared/shared.module';
+import { HttpModule } from '@angular/http';
+
+var config = {
+      backButtonText: '',
+      iconMode: 'md',
+      pageTransition: 'md',
+      mode:'md'
+    };
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
   ],
   imports: [
+    IonicModule.forRoot(MyApp,config),
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    SharedPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
   ],
   providers: [
     StatusBar,

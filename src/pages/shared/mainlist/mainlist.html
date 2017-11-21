@@ -1,0 +1,35 @@
+<ion-card class="main-list" *ngFor="let item of items" no-margin>
+ <div class="main-img" [ngClass]="{'video-img':videolist}">
+    <img src="{{item.img}}" [navPush]="'DetailPage'">
+    <img class="play-icon" src="assets/images/play.png" *ngIf="videolist"/>
+ </div>
+
+
+  <ion-item>
+    <ion-avatar item-start>
+      <img src="{{item.img2}}">
+    </ion-avatar>
+    <h2>La Cachina Bar</h2>
+    <span item-end>4h</span>
+  </ion-item>
+
+  <ion-card-content *ngIf="!photoslist">
+    <p>Música de infancia millennial y buenos tragos</p>
+  </ion-card-content>
+
+  <ion-row class="like-share" padding-horizontal>
+    <ion-col col-6 no-padding>
+        <p color="lightColor">Lugares</p>
+    </ion-col>
+    <ion-col col-6 no-padding text-end>
+        <button ion-button icon-start clear (click)="like(item)">
+            <ion-icon *ngIf="!item.activeLike" color="dark" name="heart-outline"></ion-icon>
+            <ion-icon *ngIf="item.activeLike" color="primary" name="heart-outline"></ion-icon>
+        </button>
+        <button ion-button icon-start clear (click)="sharePopover($event)">
+            <ion-icon  color="dark" name="share"></ion-icon>
+        </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+
