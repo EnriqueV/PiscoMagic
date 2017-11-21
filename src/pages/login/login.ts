@@ -60,7 +60,7 @@ export class LoginPage {
 
 
 
-    this.http.post('http://dcsocialmarketing.com/previo/PiscosAdmin/index.php/', data)
+    this.http.post('http://dcsocialmarketing.com/previo/PiscosAdmin/index.php/api/login', data)
     .subscribe(data => {
         console.log(data.status);
 

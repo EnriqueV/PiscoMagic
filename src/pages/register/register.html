@@ -10,7 +10,7 @@
                     </ion-item>
 
                     <ion-item no-padding>
-                      <ion-input type="number" placeholder="Telefono" [(ngModel)]="tel" name="tel"></ion-input>
+                      <ion-input type="number" placeholder="Telefono" [(ngModel)]="telefono" name="tel"></ion-input>
                     </ion-item>
                 </div>
 
@@ -36,7 +36,7 @@
               </div>-->
             </ion-list>
 
-            <button ion-button block color="secondary" [navPush]="'HomePage'">Registrarme</button>
+            <button ion-button block color="secondary" (click)="submit()">Registrarme</button>
             <p color="light"  [navPush]="'LoginPage'" no-margin>Regresar</p>
 
             <div class="option-sign">
