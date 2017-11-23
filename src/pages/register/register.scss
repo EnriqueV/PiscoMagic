@@ -1,7 +1,8 @@
 page-register {
-    .mainbg{
-        @include bgGradient;
-    }
+  .mainbg{
+    background: -webkit-gradient(linear, left top, left bottom, from(#023556), color-stop(46%, #fff), to(#fff));
+    background: linear-gradient(to bottom, #fff 0%, #fff 46%, #fff 100%);
+  }
     .app-form{
             .user-name{
             display: flex;
@@ -10,7 +11,7 @@ page-register {
                 &:nth-of-type(1){
                 margin-right: 10px;
                 width: 65%;
-                }    
+                }
                 }
             }
             .country-code{
@@ -21,11 +22,11 @@ page-register {
                 margin-right: 10px;
                 }
                  &:nth-of-type(2){
-                width: calc(100% - 70px);    
-                }    
+                width: calc(100% - 70px);
+                }
                 }
             }
-            
+
             .item-input{
             border: none !important;
                 .item-inner{
@@ -35,5 +36,15 @@ page-register {
             .option-sign {
             margin-top: 10px;
             }
-        } 
+        }
+}
+
+.app-form .text-input-md {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: #343434 !important;
+  width: 100%;
+}
+input::placeholder {
+  color: red;
 }

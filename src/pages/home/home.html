@@ -20,7 +20,17 @@
 </ion-header>
 
 <ion-content>
-      <mainlist></mainlist>
+  <ion-card *ngFor="let item of items">
+    <img src="https://diariocorreo.pe/media/thumbs/uploads/articles/images/peru-en-el-primer-lugar-en-creditos-para-emp-47510-jpg_604x0.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.name}}
+        </ion-card-title>
+      <p>
+        {{item.direccion}}
+      </p>
+    </ion-card-content>
+  </ion-card>
      <!-- <ion-fab bottom right >
         <button  ion-fab color="primary" (click)="presentcategory($event)"><ion-icon name="add"></ion-icon></button>
       </ion-fab>-->

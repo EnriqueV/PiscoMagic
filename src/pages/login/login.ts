@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
+import {Headers,RequestOptions} from '@angular/http';
 
 @IonicPage()
 @Component({
@@ -51,27 +52,23 @@ export class LoginPage {
 
 
   submit() {
+    var headers = new Headers();
+    headers.append("Accept", 'application/json');
+    headers.append('Content-Type', 'application/json' );
+    let options = new RequestOptions({ headers: headers });
 
-    var data = {
+    let postParams = {
       "username": this.username,
       "password": this.password
-    };
-    debugger;
+    }
 
-
-
-    this.http.post('http://dcsocialmarketing.com/previo/PiscosAdmin/index.php/api/login', data)
-    .subscribe(data => {
-        console.log(data.status);
-
-    }, error => {
-      let alert = this.alertCtrl.create({
-        title: 'Error',
-        subTitle: 'Problema de conexion con el servidor',
-        buttons: ['Aceptar']
+    this.http.post("http://dcsocialmarketing.com/previo/PiscosAdmin/index.php/api/login", postParams, options)
+      .subscribe(data => {
+        console.log(data);
+      }, error => {
+        console.log(error);// Error getting the data
       });
-      alert.present();
-    });
+
 
 }
 }

@@ -2,10 +2,11 @@
 <ion-content class="mainbg" padding>
     <div class="Loginpage">
           <form class="app-form" text-center>
+              <img src="http://res.cloudinary.com/dcbi3quoh/image/upload/v1511376115/logo_e9r43d.png" alt="">
             <ion-list>
                 <div class="user-name">
                     <ion-item no-padding>
-                      <ion-icon name="person" color="secondary" item-start></ion-icon>
+                      <ion-icon name="person" color="danger" item-start></ion-icon>
                       <ion-input type="text" placeholder="Usuario" [(ngModel)]="username" name="username"></ion-input>
                     </ion-item>
 
@@ -15,12 +16,12 @@
                 </div>
 
                 <ion-item no-padding>
-                  <ion-icon name="md-lock" color="secondary"  item-start></ion-icon>
+                  <ion-icon name="md-lock" color="danger"  item-start></ion-icon>
                   <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"></ion-input>
                 </ion-item>
 
                  <ion-item no-padding>
-                  <ion-icon name="ios-mail" color="secondary"  item-start></ion-icon>
+                  <ion-icon name="ios-mail" color="danger"  item-start></ion-icon>
                   <ion-input type="email" placeholder="Correo" [(ngModel)]="email" name="email"></ion-input>
                 </ion-item>
 
@@ -36,7 +37,7 @@
               </div>-->
             </ion-list>
 
-            <button ion-button block color="secondary" (click)="submit()">Registrarme</button>
+            <button ion-button block color="danger" (click)="submit()" [navPush]="'HomePage'">Registrarme</button>
             <p color="light"  [navPush]="'LoginPage'" no-margin>Regresar</p>
 
             <div class="option-sign">

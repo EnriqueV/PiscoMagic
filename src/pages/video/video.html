@@ -20,7 +20,17 @@
 </ion-header>
 
 <ion-content>
-      <mainlist></mainlist>
+  <ion-card *ngFor="let item of items">
+    <img src="{{'http://dcsocialmarketing.com/previo/PiscosAdmin/images/noticias/'+item.imageUrl}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.titulo}}
+        </ion-card-title>
+      <p>
+
+      </p>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
 

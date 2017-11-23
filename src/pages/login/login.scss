@@ -55,7 +55,7 @@ color: color($colors,light);
         width: 100%;
     }
     input::-webkit-input-placeholder {
-        color: color($colors,light);
+        color: red;
         font-size: 1.4rem;
     }
     .button-md{
@@ -74,4 +74,14 @@ margin-top:40px;
     margin: 0 auto;
     font-size: 22px;
     }
+}
+
+.app-form .text-input-md {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  color: #343434 !important;
+  width: 100%;
+}
+.tes{
+  color:#cc0000;
 }
