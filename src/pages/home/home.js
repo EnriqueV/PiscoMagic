@@ -6,7 +6,7 @@ export default StyleSheet.create({
   },
   'toolbar-background-md': {
     'borderColor': '#b2b2b2',
-    'background': '#fff'
+    'background': '#cc0000'
   },
   'icon2': {
     'color': '#cc0000 !important'
