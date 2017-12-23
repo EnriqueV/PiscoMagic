@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {  AlertController } from 'ionic-angular';
+import { AlertController, MenuController } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
-import {Headers,RequestOptions} from '@angular/http';
+import { Headers, RequestOptions } from '@angular/http';
 
 @IonicPage()
 @Component({
@@ -13,25 +13,40 @@ import {Headers,RequestOptions} from '@angular/http';
 export class RegisterPage {
   _http: any;
 
-    username: string;
-    password:string;
-    email: string;
-    telefono:string;
+  username: string;
+  password: string;
+  email: string;
+  telefono: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private http: Http,public alertCtrl: AlertController,) {}
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private http: Http,
+    public alertCtrl: AlertController,
+    public menu: MenuController
+  ) { }
 
+  ionViewDidEnter() {
+    // the root left menu should be disabled on the tutorial page
+    this.menu.enable(false);
+  }
+
+  ionViewDidLeave() {
+    // enable the root left menu when leaving the tutorial page
+    this.menu.enable(true);
+  }
 
   submit() {
     var headers = new Headers();
     headers.append("Accept", 'application/json');
-    headers.append('Content-Type', 'application/json' );
+    headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
 
     let postParams = {
       "username": this.username,
       "password": this.password,
-      "email":this.email,
-      "telefono":this.telefono
+      "email": this.email,
+      "telefono": this.telefono
     }
 
     this.http.post("http://dcsocialmarketing.com/previo/PiscosAdmin/index.php/api/registrarse", postParams, options)
@@ -40,11 +55,6 @@ export class RegisterPage {
       }, error => {
         console.log(error);// Error getting the data
       });
-
-
-
-    }
-
-
+  }
 
 }

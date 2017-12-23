@@ -2,18 +2,21 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Storage } from '@ionic/storage';
 
+import { LoginPage } from '../pages/login/login';
+import { SlidePage } from '../pages/slide/slide';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any = "LoginPage";
+  rootPage: any;
   public static callfrom;
   pages:  Array<any>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public storage: Storage) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -24,6 +27,7 @@ export class MyApp {
        { title: 'Cupones', component: "NotificationPage", icon:"notifications" },
        { title: 'perfil', component: "ProfilePage", icon:"person" },
        { title: 'Radios', component: "AboutPage", icon:"information-circle" },
+       { title: 'Contacto', component: "ContactPage", icon:"call" },
        { title: 'Salir', component: "LoginPage", icon:"log-out" }
     ];
 
@@ -35,6 +39,15 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      // Check if the user has already seen the slide
+      this.storage.get('hasSeenSlide')
+      .then((hasSeenSlide) => {
+        if (hasSeenSlide) {
+          this.rootPage = LoginPage;
+        } else {
+          this.rootPage = SlidePage;
+        }
+      });
     });
   }
 

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, MenuController } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
-import {Headers,RequestOptions} from '@angular/http';
+import { Headers, RequestOptions } from '@angular/http';
 
 @IonicPage()
 @Component({
@@ -13,14 +13,27 @@ export class LoginPage {
   _http: any;
 
   username: any;
-  password:any;
+  password: any;
 
- constructor(public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController,  private http: Http) {
-  this.http = http;
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    private http: Http,
+    public menu: MenuController
+  ) {
+    this.http = http;
+  }
 
- }
+  ionViewDidEnter() {
+    // the root left menu should be disabled on the tutorial page
+    this.menu.enable(false);
+  }
 
-
+  ionViewDidLeave() {
+    // enable the root left menu when leaving the tutorial page
+    this.menu.enable(true);
+  }
 
   forgotPassword() {
     let forgotpas = this.alertCtrl.create({
@@ -50,11 +63,10 @@ export class LoginPage {
     forgotpas.present();
   }
 
-
   submit() {
     var headers = new Headers();
     headers.append("Accept", 'application/json');
-    headers.append('Content-Type', 'application/json' );
+    headers.append('Content-Type', 'application/json');
     let options = new RequestOptions({ headers: headers });
 
     let postParams = {
@@ -68,7 +80,6 @@ export class LoginPage {
       }, error => {
         console.log(error);// Error getting the data
       });
+  }
 
-
-}
 }

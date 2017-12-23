@@ -1,0 +1,17 @@
+<ion-content no-bounce>
+  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+
+    <ion-slide class="slide-one"></ion-slide>
+
+    <ion-slide class="slide-two" [style.background]="'url(../assets/images/slide/' + plataforma + '/2.jpg)'"></ion-slide>
+
+    <ion-slide class="slide-three" [style.background]="'url(../assets/images/slide/' + plataforma + '/3.jpg)'"></ion-slide>
+
+    <ion-slide class="slide-four" [style.background]="'url(../assets/images/slide/' + plataforma + '/4.jpg)'"></ion-slide>
+
+    <ion-slide class="slide-five" [style.background]="'url(../assets/images/slide/' + plataforma + '/5.jpg)'"></ion-slide>
+
+    <ion-slide class="slide-six" [style.background]="'url(../assets/images/slide/' + plataforma + '/6.jpg)'" (click)="startApp()"></ion-slide>
+
+  </ion-slides>
+</ion-content>

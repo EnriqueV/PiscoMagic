@@ -1,0 +1,58 @@
+page-contact {
+  .Loginpage {
+    align-items: center !important;
+  }
+
+  .item-block {
+    min-height: 2.4rem !important;
+
+    &:first-child {
+      border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+  .text-input-md {
+    margin: 0 8px !important;
+  }
+  .item-input {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 5px;
+  }
+
+  h3 {
+    color: #cc0000;
+    margin: 0 auto 25px auto;
+    width: 70%;
+  }
+
+  hr {
+    background-color: #cc0000 !important;
+    margin: 15px auto;
+    width: 85%;
+  }
+
+  .list-md {
+    margin-top: 35px !important;
+    margin: -1px auto 36px auto;
+    width: 90%;
+  }
+
+  .button-md {
+    margin-top: 20px !important;
+  }
+
+  .text-input::-moz-placeholder {
+    color: #9f9f9f !important;
+    font-size: 1.6rem;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: #9f9f9f !important;
+    font-size: 1.6rem;
+  }
+
+  .text-input::-webkit-input-placeholder {
+    text-indent: 0;
+    color: #9f9f9f !important;
+    font-size: 1.6rem;
+  }
+}
