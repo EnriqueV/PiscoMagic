@@ -2,8 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { Storage } from '@ionic/storage';
-
+import { MenuPage } from '../pages/menu/menu';
 import { LoginPage } from '../pages/login/login';
 import { SlidePage } from '../pages/slide/slide';
 
@@ -12,11 +11,11 @@ import { SlidePage } from '../pages/slide/slide';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage: any;
+  rootPage: any = SlidePage;
   public static callfrom;
   pages:  Array<any>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public storage: Storage) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -39,15 +38,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      // Check if the user has already seen the slide
-      this.storage.get('hasSeenSlide')
-      .then((hasSeenSlide) => {
-        if (hasSeenSlide) {
-          this.rootPage = LoginPage;
-        } else {
-          this.rootPage = SlidePage;
-        }
-      });
+
     });
   }
 

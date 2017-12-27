@@ -8,4 +8,13 @@ page-slide {
   .slide-one {
     background-image: url('../assets/images/slide/1.jpg');
   }
+  .last-slide {
+    background-image: url('../assets/images/slide/0.jpg');
+
+    button {
+      margin: 55% auto 0 auto;
+      width: 85% !important;
+      color:  #e44d26 !important;
+    }
+  }
 }

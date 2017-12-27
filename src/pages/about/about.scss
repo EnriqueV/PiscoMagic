@@ -1,5 +1,11 @@
 page-about {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
 
+    ion-icon {
+      color:#fff !important;
+    }
+  }
 }
 .segment-md .segment-button {
   -webkit-box-flex: 1;

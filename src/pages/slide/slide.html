@@ -1,5 +1,5 @@
 <ion-content no-bounce>
-  <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
+  <ion-slides #slides pager>
 
     <ion-slide class="slide-one"></ion-slide>
 
@@ -11,7 +11,11 @@
 
     <ion-slide class="slide-five" [style.background]="'url(../assets/images/slide/' + plataforma + '/5.jpg)'"></ion-slide>
 
-    <ion-slide class="slide-six" [style.background]="'url(../assets/images/slide/' + plataforma + '/6.jpg)'" (click)="startApp()"></ion-slide>
+    <ion-slide class="slide-six" [style.background]="'url(../assets/images/slide/' + plataforma + '/6.jpg)'"></ion-slide>
+
+    <ion-slide class="last-slide">
+      <button ion-button block color="light" [navPush]="'LoginPage'">Registrarme</button>
+    </ion-slide>
 
   </ion-slides>
 </ion-content>

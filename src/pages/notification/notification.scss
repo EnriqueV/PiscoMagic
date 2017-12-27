@@ -1,13 +1,21 @@
 page-notification {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+
    .scroll-content{
        padding-left: 10px !important;
-   } 
+   }
   .notif-content{
       width: calc(100% - 120px);
       display: inline-block;
       float: left;
         .item-md{
-            padding: 0; 
+            padding: 0;
             [item-end]{
                 margin: 0 0 0 10px;
             }
@@ -15,8 +23,8 @@ page-notification {
         .card-content{
         padding: 0 !important;
         &:after{
-        display: none;    
-        }    
+        display: none;
+        }
             p {
             font-weight: normal;
             max-height: 42px;
@@ -26,7 +34,7 @@ page-notification {
         }
   }
   .main-list{
-  border-bottom: 1px solid  rgba(color($colors,lightColor),.7)  !important;   
+  border-bottom: 1px solid  rgba(color($colors,lightColor),.7)  !important;
   padding: 5px 0;
         .main-img {
         position: relative;

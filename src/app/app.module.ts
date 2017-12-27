@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SharedPageModule } from '../pages/shared/shared.module';
 import { HttpModule } from '@angular/http';
-import { IonicStorageModule } from '@ionic/storage';
 import { SlidePage } from '../pages/slide/slide';
 import { LoginPage } from '../pages/login/login';
 import { LoginPageModule } from '../pages/login/login.module';
@@ -28,7 +27,6 @@ var config = {
     BrowserModule,
     SharedPageModule,
     HttpModule,
-    IonicStorageModule.forRoot(),
     LoginPageModule
   ],
   bootstrap: [IonicApp],

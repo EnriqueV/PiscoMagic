@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, MenuController } 
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
+import { MenuPage } from '../menu/menu';
 
 @IonicPage()
 @Component({

@@ -1,0 +1,46 @@
+page-menu {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  ion-content {
+    background-color: #e54e26 !important;
+  }
+
+  ion-row {
+    height: 100%;
+    width: 100%;
+  }
+  ion-col {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: calc(100% / 5) !important;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    &:nth-child(1) a {
+      background-image: url('../assets/images/menu/gastronomia.jpg');
+    }
+    &:nth-child(2) a {
+      background-image: url('../assets/images/menu/radio.jpg');
+    }
+    &:nth-child(3) a {
+      background-image: url('../assets/images/menu/eventos.jpg');
+    }
+    &:nth-child(4) a {
+      background-image: url('../assets/images/menu/cupones.jpg');
+    }
+    &:nth-child(5) a {
+      background-image: url('../assets/images/menu/directorio.jpg');
+    }
+  }
+}

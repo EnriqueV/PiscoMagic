@@ -2,6 +2,14 @@ page-home {
     [menuToggle]{
     display: block !important;
     }
+
+    .toolbar-title, .bar-button {
+      color:#fff !important;
+
+      ion-icon {
+        color:#fff !important;
+      }
+    }
 }
 .toolbar-background-md {
   border-color: #b2b2b2;

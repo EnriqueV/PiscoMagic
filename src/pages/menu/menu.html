@@ -1,0 +1,48 @@
+<ion-header>
+ <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" class="icon"></ion-icon>
+    </button>
+    <ion-title>Menú</ion-title>
+    <ion-buttons end>
+
+        <button ion-button icon-only  [navPush]="'ProfilePage'">
+          <ion-icon name="person" class="icon2"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search" class="icon2"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+      <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-menu">
+
+  <ion-row class="flex-grid">
+
+    <ion-col col-12>
+      <a class="flex-link" href="#"></a>
+    </ion-col>
+
+    <ion-col col-12>
+      <a class="flex-link" [navPush]="'AboutPage'"></a>
+    </ion-col>
+
+    <ion-col col-12>
+      <a class="flex-link" href="#"></a>
+    </ion-col>
+
+    <ion-col col-12>
+      <a class="flex-link" [navPush]="'NotificationPage'"></a>
+    </ion-col>
+
+    <ion-col col-12>
+      <a class="flex-link" href="#"></a>
+    </ion-col>
+
+  </ion-row>
+
+</ion-content>

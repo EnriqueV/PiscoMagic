@@ -4,6 +4,7 @@ import { AlertController, MenuController } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 import { Http } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
+import { MenuPage } from '../menu/menu';
 
 @IonicPage()
 @Component({

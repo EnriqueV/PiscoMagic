@@ -2,7 +2,6 @@ import { Component, ViewChild } from '@angular/core';
 
 import { MenuController, NavController, Slides, Platform } from 'ionic-angular';
 
-import { Storage } from '@ionic/storage';
 
 import { LoginPage } from '../login/login';
 
@@ -20,7 +19,6 @@ export class SlidePage {
   constructor(
     public navCtrl: NavController,
     public menu: MenuController,
-    public storage: Storage,
     public platform: Platform
   ) {
     this.platform.ready().then(() => {
@@ -29,16 +27,6 @@ export class SlidePage {
         console.log("running on Android device!");
       }
     });
-  }
-
-  startApp() {
-    this.navCtrl.push(LoginPage).then(() => {
-      this.storage.set('hasSeenSlide', 'false'); //true para mostrarlo solo una vez
-    })
-  }
-
-  onSlideChangeStart(slider: Slides) {
-    this.showSkip = !slider.isEnd();
   }
 
   ionViewWillEnter() {
