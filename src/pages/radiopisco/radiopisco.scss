@@ -1,0 +1,16 @@
+page-radiopisco {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+
+  .scroll-content {
+    background-image: url('../assets/images/radio/radiopisco-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

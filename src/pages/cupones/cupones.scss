@@ -1,0 +1,61 @@
+page-cupones {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  .bar-button-menutoggle {
+    display: inline !important;
+  }
+
+  .scroll-content {
+    background-color: #000;
+  }
+
+  .cupones {
+    height: calc(100% - 5px);
+
+    ion-col {
+      margin: 0 !important;
+      margin-bottom: 5px !important;
+      min-height: 33%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      .perc {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        background-color: #fff;
+        color: #e44d26;
+        padding: 0.4rem 0rem;
+        small {
+          margin: 1.2rem 1.5rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+      .legend {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #e44d26;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        p {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}

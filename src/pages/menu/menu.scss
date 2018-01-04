@@ -1,23 +1,96 @@
 page-menu {
-  .toolbar-title, .bar-button {
+  .toolbar-background-md {
+    color:#e44d26 !important;
+  }
+  .toolbar-title, .bar-button-menutoggle {
     color:#fff !important;
+    display: inline !important;
 
     ion-icon {
       color:#fff !important;
     }
   }
   ion-content {
-    background-color: #e54e26 !important;
+    background-color: #000 !important;
   }
 
   ion-row {
-    height: 100%;
+    height: calc(100% + 3px);
     width: 100%;
   }
+}
+
+// Slide Menu
+.menu-inner ion-header,
+.menu-inner .scroll-content {
+  background-color: #cc0000 !important;
+
+  ion-icon, span {
+    color: #fff !important;
+  }
+
+  button.item.item-block.item-md {
+    border: none !important;
+  }
+}
+ // Ads Banner
+.ads-banner {
+  background-image: url('../assets/images/ads.jpg');
+  background-size: contain;
+  background-position: bottom;
+  height: 43px;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+//Small slide
+.small-slide {
+  height: 45%;
+  position: relative;
+  background: #000;
+
+  button.swiper-pagination-bullet {
+    background-color: #fff;
+    opacity: 0.7;
+  }
+  button.swiper-pagination-bullet-active {
+    background-color: rgb(0, 122, 255);
+  }
+
+  .slide-legend {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 35%;
+    background-color: rgba(0,0,0,0.5);
+
+    h6 {
+      color: #fff;
+      text-shadow: 1.2px 1.2px 1px rgba(0,0,0,1);
+    }
+  }
+
+  ion-slide {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+// Menu
+.main-menu {
   ion-col {
     margin: 0 !important;
-    padding: 0 !important;
-    min-height: calc(100% / 5) !important;
+    padding: 1.5px 0 !important;
+    min-height: 20%;
+
+    &:first-child {
+      margin-top: 5px !important;
+    }
+    &:last-child {
+      padding-bottom: 0 !important;
+    }
 
     a {
       display: block;
@@ -25,22 +98,6 @@ page-menu {
       height: 100%;
       background-size: cover;
       background-position: center;
-    }
-
-    &:nth-child(1) a {
-      background-image: url('../assets/images/menu/gastronomia.jpg');
-    }
-    &:nth-child(2) a {
-      background-image: url('../assets/images/menu/radio.jpg');
-    }
-    &:nth-child(3) a {
-      background-image: url('../assets/images/menu/eventos.jpg');
-    }
-    &:nth-child(4) a {
-      background-image: url('../assets/images/menu/cupones.jpg');
-    }
-    &:nth-child(5) a {
-      background-image: url('../assets/images/menu/directorio.jpg');
     }
   }
 }

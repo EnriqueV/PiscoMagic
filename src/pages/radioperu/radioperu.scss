@@ -1,0 +1,20 @@
+page-radioperu {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+
+  ion-content {
+    background-color: #000;
+  }
+
+  .scroll-content {
+    background-image: url('../assets/images/radio/radioperu-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

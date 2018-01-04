@@ -1,31 +1,40 @@
-
 <ion-content class="mainbg" padding>
-    <div class="Loginpage">
-          <form class="app-form" text-center>
-              <img src="http://res.cloudinary.com/dcbi3quoh/image/upload/v1511376115/logo_e9r43d.png" alt="">
-            <ion-list>
-                <div class="user-name">
-                    <ion-item no-padding>
-                      <ion-icon name="person" color="danger" item-start></ion-icon>
-                      <ion-input type="text" placeholder="Usuario" [(ngModel)]="username" name="username"></ion-input>
-                    </ion-item>
+  <div class="Loginpage">
+    <form class="app-form" text-center>
+      <img src="http://res.cloudinary.com/dcbi3quoh/image/upload/v1511376115/logo_e9r43d.png" alt="">
+      <ion-list>
+        <ion-item no-padding>
+          <ion-icon name="person" color="danger" item-start></ion-icon>
+          <ion-input type="text" placeholder="Nombre" [(ngModel)]="name" name="name"></ion-input>
+        </ion-item>
 
-                    <ion-item no-padding>
-                      <ion-input type="number" placeholder="Telefono" [(ngModel)]="telefono" name="tel"></ion-input>
-                    </ion-item>
-                </div>
+        <div class="user-name">
+          <ion-item no-padding>
+            <ion-icon name="person" color="danger" item-start></ion-icon>
+            <ion-input type="text" placeholder="Usuario" [(ngModel)]="username" name="username"></ion-input>
+          </ion-item>
 
-                <ion-item no-padding>
-                  <ion-icon name="md-lock" color="danger"  item-start></ion-icon>
-                  <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"></ion-input>
-                </ion-item>
+          <ion-item no-padding>
+            <ion-input type="number" placeholder="Telefono" [(ngModel)]="telefono" name="tel"></ion-input>
+          </ion-item>
+        </div>
 
-                 <ion-item no-padding>
-                  <ion-icon name="ios-mail" color="danger"  item-start></ion-icon>
-                  <ion-input type="email" placeholder="Correo" [(ngModel)]="email" name="email"></ion-input>
-                </ion-item>
+        <ion-item no-padding>
+          <ion-icon name="md-lock" color="danger" item-start></ion-icon>
+          <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password"></ion-input>
+        </ion-item>
 
-               <!--<div class="country-code">
+        <ion-item no-padding>
+          <ion-icon name="md-lock" color="danger" item-start></ion-icon>
+          <ion-input type="password" placeholder="Confirmar Contraseña" [(ngModel)]="passwdMatch" name="passwdMatch"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-icon name="ios-mail" color="danger" item-start></ion-icon>
+          <ion-input type="email" placeholder="Correo" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <!--<div class="country-code">
                 <ion-item no-padding>
                   <ion-icon name="call" color="secondary" item-start></ion-icon>
                   <ion-input type="tel" value="+1"></ion-input>
@@ -35,27 +44,11 @@
                   <ion-input type="tel" placeholder="Mobile"></ion-input>
                 </ion-item>
               </div>-->
-            </ion-list>
+      </ion-list>
 
-            <button ion-button block color="danger" (click)="submit()" [navPush]="'MenuPage'">Registrarme</button>
-            <p color="light"  [navPush]="'LoginPage'" no-margin>Regresar</p>
+      <button ion-button block color="danger" (click)="submit()" [navPush]="'MenuPage'">Registrarme</button>
+      <p color="danger" [navPush]="'LoginPage'" no-margin>Regresar</p>
 
-            <div class="option-sign">
-              <p>Siguenos</p>
-              <ion-grid no-padding>
-                <ion-row padding-bottom>
-                  <ion-col width-33>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </ion-col>
-                  <ion-col width-33>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </ion-col>
-                  <ion-col width-33>
-                  <!--  <ion-icon name="logo-googleplus"></ion-icon>-->
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-           </div>
-          </form>
-    </div>
+    </form>
+  </div>
 </ion-content>

@@ -3,10 +3,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-radiopisco',
+  templateUrl: 'radiopisco.html'
 })
-export class AboutPage {
+export class RadioPiscoPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 }

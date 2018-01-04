@@ -1,0 +1,28 @@
+page-radio {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  .bar-button-menutoggle {
+    display: inline !important;
+  }
+
+  ion-content {
+    background-color: #000 !important;
+  }
+
+  .bg-radio { //temp*
+    background-image: url('../assets/images/radio/header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .flex-grid {
+    height: 55%;
+    display: flex;
+  }
+}

@@ -20,13 +20,16 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-       { title: 'Piscos', component: 'HomePage', icon:"home" },
-       { title: 'Noticias', component: 'VideoPage', icon:"play" },
-     //  { title: 'Noticias', component: 'PhotosPage', icon:"image"  },
-       { title: 'Cupones', component: "NotificationPage", icon:"notifications" },
-       { title: 'perfil', component: "ProfilePage", icon:"person" },
-       { title: 'Radios', component: "AboutPage", icon:"information-circle" },
-       { title: 'Contacto', component: "ContactPage", icon:"call" },
+       { title: 'Historia del Pisco', component: 'HistoriaPage', icon:"home" },
+       { title: 'Menú', component: 'MenuPage', icon:"menu" },
+       { title: 'Pisco Directorio', component: "DirectorioPage", icon:"book" },
+       { title: 'Pisco y Gastronomía', component: "HomePage", icon:"restaurant" }, //GastronomiaPage
+       { title: 'Radio', component: "RadioPage", icon:"mic" },
+       { title: 'Eventos', component: "EventosPage", icon:"calendar" },
+       { title: 'Cupones', component: "CuponesPage", icon:"paper" },
+       { title: 'Perfil', component: "ProfilePage", icon:"person" }, //PerfilPage
+       { title: 'Nosotros', component: "NosotrosPage", icon:"people" },
+       { title: 'Contáctanos', component: "ContactPage", icon:"call" },
        { title: 'Salir', component: "LoginPage", icon:"log-out" }
     ];
 
