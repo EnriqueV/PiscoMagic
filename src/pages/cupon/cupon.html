@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cupón</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="main-list" no-margin>
+    <div class="main-img">
+      <img src="http://blog.starperu.com/es/wp-content/uploads/2014/12/limbus.png">
+    </div>
+
+    <ion-card-content>
+      <p>Restaurant Comida Peruana - Limón</p>
+      <small color="danger">EXPIRÁ: 23/12/2017 22:00</small> <br>
+      <span>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+      </span>
+    </ion-card-content>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <div class="main-detail" padding>
+      <p>
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; Calle Hércules 121, San Roque, Surco Lima, Perú
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-call-outline"></ion-icon> &nbsp; +519 222 36470
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-mail-outline"></ion-icon> &nbsp; pisquerialima@outlook.com
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-globe-outline"></ion-icon> &nbsp; <a href="http://www.pisquerialima.com">www.pisquerialima.com</a>
+      </p>
+    </div>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <div padding>
+      <button ion-button block color="danger" [navPush]="'CuponesPage'">CANJEAR</button>
+    </div>
+  </ion-card>
+</ion-content>

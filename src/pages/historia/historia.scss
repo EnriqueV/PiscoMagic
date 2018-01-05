@@ -1,0 +1,38 @@
+page-historia {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  .bar-button-menutoggle {
+    color:#fff !important;
+    display: inline !important;
+  }
+
+  p.text-justify {
+    font-weight: normal !important;
+    margin: 10px 0;
+  }
+
+  ion-col {
+    .video {
+      height: 100px;
+      width: 100%;
+      background-color: #ccc;
+    }
+  }
+  .separator {
+    padding: 0 16px;
+
+    hr {
+      background-color: #cc0000;
+      margin: 0 !important;
+    }
+  }
+}
+
+.text-justify {
+  text-align: justify !important;
+}

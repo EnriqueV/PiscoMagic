@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Perfil Evento</ion-title>
+    <ion-buttons end>
+      <button (click)="presentoption($event)" ion-button icon-only >
+         <ion-icon color="light" name="more" class="more-option"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="main-list" no-margin>
+    <div class="main-img">
+      <img src="http://blog.starperu.com/es/wp-content/uploads/2014/12/limbus.png">
+      <div class="perc">
+        <small>Viernes 29 | Dic | 2017</small>
+      </div>
+      <div class="legend">
+        <p>Sigue la fiesta donde sea...</p>
+      </div>
+    </div>
+
+      <ion-row class="text-center">
+        <ion-col col-6>
+          <p class="text-red">Inicio</p>
+          <small>Viernes 29 | Dic | 2017</small>
+        </ion-col>
+        <ion-col col-6>
+          <p class="text-red">Finaliza</p>
+          <small>Sábado 30 | Dic | 2017</small>
+        </ion-col>
+      </ion-row>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <div class="main-detail" padding>
+      <small>
+        <ion-icon color="danger" name="ios-pricetag-outline"></ion-icon>&nbsp; <span color="danger">Precio:</span> S/ 64,00.00
+      <br>
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; <span color="danger">Dirección:</span> Calle Hércules 121, San Roque, Surco Lima, Perú
+      </small>
+      <div class="map"></div>
+    </div>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <ion-row padding>
+      <ion-col col-12>
+        <h3 class="text-red">Destacados</h3>
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/images/cupones/02.jpg">
+        <small>Festival del Pisco</small>
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/images/cupones/01.jpeg">
+        <small>Noche de Dj's</small>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

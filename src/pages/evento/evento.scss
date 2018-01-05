@@ -1,0 +1,94 @@
+page-evento {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+
+  .main-img .perc {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    background-color: rgba(255,255,255,0.5);
+    color: #cc0000;
+    padding: 0.7rem 0rem;
+    border: solid #cc0000 1px;
+
+    small {
+      margin: 0.8rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  ion-row.text-center {
+    padding: 0px 16px 16px 16px;
+  }
+
+  ion-col {
+    p {
+      font-size: 1.5rem !important;
+      margin: 0 !important;
+    }
+    small {
+      color: #222;
+      font-size: 80% !important;
+    }
+    img {
+      width: 100%;
+      height: 92px;
+      object-fit: cover;
+      margin-bottom: 5px;
+    }
+  }
+  .separator {
+    padding: 0 16px;
+
+    hr {
+      background-color: #cc0000;
+      margin: 0 !important;
+    }
+  }
+
+  .main-detail {
+    ion-icon {
+      font-size: 1.5rem;
+      vertical-align: middle;
+    }
+
+    span {
+      color: #cc0000;
+      font-weight: bold;
+    }
+  }
+
+  .legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #cc0000;
+    width: 100%;
+
+    p {
+      color: #fff;
+      margin-top: 0.7rem;
+      margin-bottom: 0.7rem;
+      margin-left: 12px;
+    }
+  }
+
+  .map {
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: #ccc;
+  }
+}
+
+.text-center {
+  text-align: center !important;
+}
+.text-red {
+  color: #cc0000 !important;
+}

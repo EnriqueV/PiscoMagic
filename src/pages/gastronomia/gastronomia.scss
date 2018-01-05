@@ -1,0 +1,46 @@
+page-gastronomia {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  .bar-button-menutoggle {
+    display: inline !important;
+  }
+
+  .scroll-content {
+    background-color: #000;
+  }
+  .main-list {
+    .like-share:after {
+      background-color: #cc0000 !important;
+    }
+
+    ion-avatar {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 35px;
+      height: 35px;
+      background-color: #cc0000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      font-weight: normal !important;
+    }
+  }
+
+  .buttons {
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    ion-icon {
+      color: #cc0000 !important;
+    }
+  }
+}

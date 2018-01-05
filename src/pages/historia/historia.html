@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu" class="icon"></ion-icon>
+    </button>
+    <ion-title>PISCO MAGIC</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="main-list" no-margin>
+    <div class="main-img">
+      <img src="http://blog.starperu.com/es/wp-content/uploads/2014/12/limbus.png">
+    </div>
+
+      <ion-card-content>
+        <h1 class="text-red text-center">Historia del PISCO</h1>
+        <p class="text-justify">
+          El pisco peruano es una denominación de origen que se reserva a la bebida alcohólica aguardiente de uvas que
+          se produce en el Perú desde finales del siglo XVI.​ Es el destilado típico de este país, elaborado a partir del
+          vino fermentado de ciertas variedades de uvas (Vitis vinifera), cuyo valor ha traspasado sus fronteras, como lo
+          atestiguan los registros de embarques realizados a través del puerto de Pisco hacia Europa y otras zonas de
+          América desde el siglo XVII, tales como el Reino Unido, España, Portugal, Guatemala, Panamá, y a Estados Unidos,
+          desde mediados del siglo XIX.
+        </p>
+      </ion-card-content>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <ion-row padding>
+      <ion-col col-12>
+        <h3 class="text-red"><b>VIDEOS</b></h3>
+      </ion-col>
+      <ion-col col-6>
+        <div class="video"></div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="video"></div>
+      </ion-col>
+    </ion-row>
+
+    <div class="separator"><hr color="danger"></div>
+
+    <ion-row padding>
+      <ion-col col-6>
+        <button ion-button block color="danger" [navPush]="'NosotrosPage'">NOSOTROS</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button block color="danger" [navPush]="'ContactPage'">CONTACTANOS</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>

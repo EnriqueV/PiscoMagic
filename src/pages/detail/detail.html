@@ -1,11 +1,11 @@
 
-<ion-header class="detailHeader">
-  <ion-navbar>
-    <ion-title>detail</ion-title>
+<ion-header>
+  <ion-navbar hideBackButton="false">
+    <ion-title>Detalle</ion-title>
     <ion-buttons end>
-        <button (click)="presentoption($event)" ion-button icon-only >
-           <ion-icon color="light" name="more" class="more-option"></ion-icon>
-        </button>
+      <button (click)="presentoption($event)" ion-button icon-only >
+         <ion-icon color="light" name="more" class="more-option"></ion-icon>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
@@ -14,65 +14,70 @@
 <ion-content>
 <ion-card class="main-list" no-margin>
  <div class="main-img">
-     <img src="http://blog.starperu.com/es/wp-content/uploads/2014/12/limbus.png">
+     <img src="assets/images/cupones/02.jpg">
  </div>
 
-  <!--<ion-item>
-    <ion-avatar item-start>
-      <img src="assets/images/011.png">
-    </ion-avatar>
-    <h2>Jobs Lives</h2>
-    <span item-right>4h</span>
-  </ion-item>-->
+ <ion-item>
+   <ion-avatar item-start>
+     <ion-icon  color="light" name="restaurant"></ion-icon>
+   </ion-avatar>
+   <h2>Lomo Saltado</h2>
+ </ion-item>
 
-  <ion-card-content>
-    <p>Fresh new Google Maps redesign puts useful info front and center</p>
-  </ion-card-content>
+ <ion-card-content class="text-justify">
+   <p>Este lomo sofrito con verduras al estilo Peruano saltado con arroz una comida deliciosa.</p>
+ </ion-card-content>
 
   <div class="like-share" padding-horizontal>
-        <p color="lightColor">Lugares</p>
+        <p class="text-red">GASTRONOMÍA</p>
         <button ion-button icon-start clear (click)="activeLike = !activeLike">
-            <ion-icon *ngIf="!activeLike" color="dark" name="heart-outline"></ion-icon>
+            <ion-icon *ngIf="!activeLike" color="danger" name="heart-outline"></ion-icon>
             <ion-icon *ngIf="activeLike" color="primary" name="heart-outline"></ion-icon>
         </button>
-       <!-- <button (click)="goToBottom()" ion-button icon-start clear>
-            <ion-icon  color="dark" name="ios-chatboxes-outline"></ion-icon>
-        </button> -->
+       <button (click)="goToBottom()" ion-button icon-start clear>
+            <ion-icon  color="danger" name="ios-chatboxes-outline"></ion-icon>
+        </button>
         <button ion-button icon-start clear (click)="sharePopover($event)">
-            <ion-icon  color="dark" name="share"></ion-icon>
+            <ion-icon  color="danger" name="share"></ion-icon>
         </button>
   </div>
   <div class="main-detail" padding>
-        <p padding-bottom>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using LoremIpsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose .
+        <p padding-bottom class="text-justify">
+          El Lomo Saltado está sin duda entre los principales y más solicitados platos de la gastronomía peruana. Ocupa un lugar especial en la interminable lista de comidas peruanas que nacen gracias a la fusión de la cocina peruana con otras cocinas del mundo, en este caso, la cocina oriental china.
+          <br>
+          Existen variantes en este plato, ya que dependiendo del gusto, se han sustituido algunos ingredientes. El Lomo Saltado es uno de los platos más consumidos en el Perú.
+          <br>
+          El nombre inicial de este plato fue lomito a la chorrillana (por las tiras de cebolla que lleva), lomito salteado o lomito de res, finalmente todos terminamos conociéndolo como Lomo Saltado. Y con ese nombre se ha popularizado.
         </p>
-       <!-- <div class="more-story" padding-vertical>
-            <h3 class="main-title">more stories</h3>
+        <div class="separator"><hr color="danger"></div>
+       <div class="more-story" padding-vertical>
+            <h3 class="main-title text-red">DESTACADOS</h3>
 
             <ion-row no-padding>
                 <ion-col col-6 no-padding>
-                      <img src="assets/images/03.png">
-                      <p> Nasa engineer joins Uber to develop flying cars</p>
+                      <img src="assets/images/cupones/02.jpg">
+                      <p> Arroz con Pollo Peruano</p>
                 </ion-col>
                 <ion-col col-6 no-padding>
-                      <img src="assets/images/04.png">
-                      <p> Nasa engineer joins Uber to develop flying cars</p>
+                      <img src="assets/images/cupones/01.jpeg">
+                      <p> Ceviche de Camarones a la Piedra</p>
                 </ion-col>
             </ion-row>
-        </div> -->
-        <!--<div class="comments" padding-top>
-            <h3 class="main-title">comments</h3>
+        </div>
+        <div class="separator"><hr color="danger"></div>
+        <div class="comments" padding-top>
+            <h3 class="main-title text-red">COMENTARIOS</h3>
             <ion-item>
                 <ion-avatar item-start>
                     <img src="assets/images/011.png">
                 </ion-avatar>
-                <h2>WendyVerdades <span>3 days ago</span></h2>
+                <h2>Wendy Fernández <span>Hace 3 días</span></h2>
                 <ion-icon class="rate" *ngFor="let icon of icons" [name]="icon" color="ratecolor"></ion-icon>
-                <span class="rate-value">3.7</span>
-                <p>I liked it...</p>
+                <span class="rate-value">4.6</span>
+                <p>Me encanto...</p>
             </ion-item>
-            <ion-textarea rows="1" placeholder="write comment"></ion-textarea>
-        </div> -->
+            <ion-textarea rows="1" placeholder="escribe tu comentario..."></ion-textarea>
+        </div>
   </div>
 </ion-card>
 </ion-content>

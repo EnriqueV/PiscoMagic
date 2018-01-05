@@ -1,0 +1,50 @@
+page-cupon {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+
+  ion-card-content {
+    p {
+      color: #cc0000 !important;
+      font-size: 1.5rem !important;
+      margin: 0 !important;
+    }
+    small {
+      color: #cc0000 !important;
+      font-size: 80% !important;
+    }
+    span {
+      margin-top: 5px !important;
+      display: block;
+      font-weight: lighter;
+    }
+  }
+  .separator {
+    padding: 0 16px;
+
+    hr {
+      background-color: #cc0000;
+    }
+  }
+
+  .main-detail {
+    ion-icon {
+      font-size: 2.1rem;
+      vertical-align: middle;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1.2rem;
+
+      a {
+        color: #222;
+        text-decoration: none;
+      }
+    }
+  }
+}

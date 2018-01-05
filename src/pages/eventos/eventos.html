@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+     <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title>Eventos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+    <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="eventos">
+    <ion-col col-12 *ngFor="let evento of eventos" [style.backgroundImage]=evento.bg (click)="goTo('EventoPage')">
+      <div class="perc">
+        <small>{{evento.fecha}}</small>
+      </div>
+      <div class="legend">
+        <p>{{evento.txt}}</p>
+        <div class="blank">
+          <small>
+            <ion-icon color="danger" name="ios-pricetag-outline"></ion-icon> &nbsp;<span color="danger">Precio:</span> {{evento.precio}}
+          <br>
+            <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; <span color="danger">Dirección:</span> {{evento.dir}}
+          </small>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,79 @@
+page-eventos {
+  .toolbar-title, .bar-button {
+    color:#fff !important;
+
+    ion-icon {
+      color:#fff !important;
+    }
+  }
+  .bar-button-menutoggle {
+    display: inline !important;
+  }
+
+  .scroll-content {
+    background-color: #000;
+  }
+
+  .eventos {
+    height: calc(100% - 5px);
+
+    ion-col {
+      margin: 0 !important;
+      min-height: 45%;
+      position: relative;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-bottom: solid #cc0000 1px;
+
+      &:last-child {
+        border: none !important;
+      }
+
+      .perc {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        background-color: rgba(255,255,255,0.5);
+        color: #cc0000;
+        padding: 0.7rem 0rem;
+        border: solid #cc0000 1px;
+
+        small {
+          margin: 0.8rem;
+          font-size: 1.2rem;
+        }
+      }
+      .legend {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: #cc0000;
+        color: #fff;
+        width: 100%;
+
+        p {
+          margin-top: 0.7rem;
+          margin-bottom: 0.7rem;
+          margin-left: 12px;
+        }
+        .blank {
+          background-color: #fff;
+          padding: 8px 12px;
+
+          small {
+            color: #222;
+            ion-icon {
+              font-size: 1.5rem;
+              vertical-align: middle;
+            }
+            span {
+              color: #cc0000;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

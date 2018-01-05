@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+     <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title>Pisco y Gastronomía</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only  [navPush]="'ProfilePage'">
+        <ion-icon name="person" class="icon2"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+    <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="main-list" no-margin *ngFor="let card of cards">
+    <ion-card-header class="like-share">
+      <h2 class="text-red">{{card.cat}}</h2>
+      <div class="buttons">
+        <button ion-button icon-start clear (click)="activeLike = !activeLike">
+            <ion-icon *ngIf="!activeLike" color="dark" name="heart-outline"></ion-icon>
+            <ion-icon *ngIf="activeLike" color="primary" name="heart-outline"></ion-icon>
+        </button>
+        <button ion-button icon-start clear (click)="sharePopover($event)">
+            <ion-icon  color="dark" name="share"></ion-icon>
+        </button>
+      </div>
+    </ion-card-header>
+
+    <div class="main-img" (click)="goTo('DetailPage')">
+      <img src={{card.img}}>
+    </div>
+
+    <ion-item (click)="goTo('DetailPage')">
+      <ion-avatar item-start>
+        <ion-icon  color="light" name={{card.icon}}></ion-icon>
+      </ion-avatar>
+      <h2>{{card.name}}</h2>
+    </ion-item>
+
+    <ion-card-content class="text-justify">
+      <p>{{card.txt}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

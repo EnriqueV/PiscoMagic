@@ -20,17 +20,17 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-       { title: 'Historia del Pisco', component: 'HistoriaPage', icon:"home" },
-       { title: 'Menú', component: 'MenuPage', icon:"menu" },
-       { title: 'Pisco Directorio', component: "DirectorioPage", icon:"book" },
-       { title: 'Pisco y Gastronomía', component: "HomePage", icon:"restaurant" }, //GastronomiaPage
-       { title: 'Radio', component: "RadioPage", icon:"mic" },
-       { title: 'Eventos', component: "EventosPage", icon:"calendar" },
-       { title: 'Cupones', component: "CuponesPage", icon:"paper" },
-       { title: 'Perfil', component: "ProfilePage", icon:"person" }, //PerfilPage
-       { title: 'Nosotros', component: "NosotrosPage", icon:"people" },
-       { title: 'Contáctanos', component: "ContactPage", icon:"call" },
-       { title: 'Salir', component: "LoginPage", icon:"log-out" }
+       { title: 'Historia del Pisco', component: 'HistoriaPage', icon:"ios-home-outline" },
+       { title: 'Menú', component: 'MenuPage', icon:"ios-menu-outline" },
+       { title: 'Pisco Directorio', component: "DirectorioPage", icon:"ios-list-box-outline" },
+       { title: 'Pisco y Gastronomía', component: "GastronomiaPage", icon:"ios-restaurant-outline" },
+       { title: 'Radio', component: "RadioPage", icon:"ios-mic-outline" },
+       { title: 'Eventos', component: "EventosPage", icon:"ios-calendar-outline" },
+       { title: 'Cupones', component: "CuponesPage", icon:"ios-paper-outline" },
+       { title: 'Perfil', component: "ProfilePage", icon:"ios-person-outline" }, //PerfilPage
+       { title: 'Nosotros', component: "NosotrosPage", icon:"ios-people-outline" },
+       { title: 'Contáctanos', component: "ContactPage", icon:"ios-call-outline" },
+       { title: 'Salir', component: "LoginPage", icon:"ios-log-out-outline" }
     ];
 
   }
