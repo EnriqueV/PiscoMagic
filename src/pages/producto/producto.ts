@@ -3,23 +3,14 @@ import { IonicPage, NavController, NavParams, PopoverController } from 'ionic-an
 
 @IonicPage()
 @Component({
-  selector: 'page-profile',
-  templateUrl: 'profile.html'
+  selector: 'page-producto',
+  templateUrl: 'producto.html'
 })
-export class ProfilePage {
-icons:Array<any>;
-
+export class ProductoPage {
+  icons:Array<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
     this.icons = ['star', 'star', 'star', 'star-half', 'star-outline'];
   }
-
-  presentoption(myEvent) {
-  let popover = this.popoverCtrl.create('MoreoptionPage');
-  popover.present({
-    ev: myEvent
-  });
-  }
-
 
 }

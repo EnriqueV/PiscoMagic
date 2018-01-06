@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu" class="icon"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons end>
+
+        <button ion-button icon-only  [navPush]="'ProfilePage'">
+          <ion-icon name="person" class="icon2"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search" class="icon2"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+      <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="main-list" no-margin>
+    <div class="main-img">
+      <img src="assets/images/cupones/02.jpg">
+    </div>
+
+    <ion-card-content class="text-justify">
+      <p>Pisquería Lima</p>
+      <small color="danger"><ion-icon class="rate" *ngFor="let icon of icons" [name]="icon" color="ratecolor"></ion-icon> &nbsp; <span>4.6(45)</span></small> <br>
+      <span class="desc">
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> Calle Hércules 121, San Roque, Surco Lima, Perú
+      </span>
+      <ion-row>
+        <ion-col col-4><button ion-button block color="danger" [navPush]="''">MAPA</button></ion-col>
+        <ion-col col-4><button ion-button block color="danger" [navPush]="''">FAVORITOS</button></ion-col>
+        <ion-col col-4><button ion-button block color="danger" [navPush]="''">COMENTARIOS</button></ion-col>
+      </ion-row>
+    </ion-card-content>
+
+    <div padding-horizontal>
+      <div class="separator">
+        <hr color="danger">
+      </div>
+    </div>
+    <div class="main-detail" padding>
+      <h3 class="main-title text-red">Detalles</h3>
+      <p>
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; Calle Hércules 121, San Roque, Surco Lima, Perú
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-call-outline"></ion-icon> &nbsp; +519 222 36470
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-mail-outline"></ion-icon> &nbsp; pisquerialima@outlook.com
+      </p>
+      <p padding-bottom>
+        <ion-icon color="danger" name="ios-globe-outline"></ion-icon> &nbsp; <a href="http://www.pisquerialima.com">www.pisquerialima.com</a>
+      </p>
+      <div class="separator">
+        <hr color="danger">
+      </div>
+      <div class="more-story" padding-vertical>
+        <h3 class="main-title text-red">Piscos</h3>
+
+        <ion-row no-padding>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/02.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/03.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/04.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/05.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/02.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/03.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/04.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/05.jpg"></ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </ion-card>
+</ion-content>

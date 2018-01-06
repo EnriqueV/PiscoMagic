@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar hideBackButton="false">
+    <ion-title>Detalle</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only  [navPush]="'ProfilePage'">
+          <ion-icon name="person" class="icon2"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="searchInput=!searchInput">
+          <ion-icon name="search" class="icon2"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar *ngIf="searchInput">
+      <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="main-list" no-margin>
+    <div class="main-img">
+      <img src="assets/images/cupones/02.jpg">
+    </div>
+
+    <div class="main-detail" padding>
+      <h3 class="main-title text-red">Detalles</h3>
+      <p>
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; Calle Hércules 121, San Roque, Surco Lima, Perú
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-call-outline"></ion-icon> &nbsp; +519 222 36470
+      </p>
+      <p>
+        <ion-icon color="danger" name="ios-mail-outline"></ion-icon> &nbsp; pisquerialima@outlook.com
+      </p>
+      <p padding-bottom>
+        <ion-icon color="danger" name="ios-globe-outline"></ion-icon> &nbsp; <a href="http://www.pisquerialima.com">www.pisquerialima.com</a>
+      </p>
+      <div class="separator">
+        <hr color="danger">
+      </div>
+      <div class="more-story" padding-vertical>
+        <h3 class="main-title text-red">Piscos</h3>
+        <ion-row no-padding>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/02.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/03.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/04.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/05.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/02.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/03.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/04.jpg"></ion-col>
+          <ion-col col-3 [navPush]="'ProductoPage'"><img src="assets/images/cupones/05.jpg"></ion-col>
+        </ion-row>
+      </div>
+
+      <div class="separator">
+        <hr color="danger">
+      </div>
+
+      <ion-row class="places" padding-vertical>
+        <h3 class="main-title text-red">Dónde Encontrarlos (2)</h3>
+        <ion-col col-12 *ngFor="let place of places">
+          <a [navPush]="'DirectPerfilPage'" class="directory-link">
+            <b>{{place.name}}</b>
+          </a>
+          <ion-icon [navPush]="'DirectPerfilPage'" class="right" color="danger" name="ios-arrow-forward"></ion-icon>
+          <small>
+            {{place.dir}}
+            <br>
+            {{place.tel}}
+          </small>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

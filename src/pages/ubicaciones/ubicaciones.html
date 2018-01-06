@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu" class="icon"></ion-icon>
+    </button>
+    <ion-title>Ubicaciones</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col col-12 *ngFor="let place of places">
+      <a [navPush]="'DirectPerfilPage'" class="directory-link">
+        <b>{{place.name}}</b> &nbsp; <ion-icon class="rate" *ngFor="let icon of place.icons" [name]="icon" color="ratecolor"></ion-icon> &nbsp; <span>{{place.rate}}</span>
+      </a>
+      <ion-icon [navPush]="'DirectPerfilPage'" class="right" color="danger" name="ios-arrow-forward"></ion-icon>
+      <small>
+        <ion-icon color="danger" name="ios-pin-outline"></ion-icon> &nbsp; {{place.dir}}
+        <br>
+        <ion-icon color="danger" name="ios-call-outline"></ion-icon> &nbsp; {{place.tel}}
+      </small>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

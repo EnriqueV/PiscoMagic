@@ -1,0 +1,31 @@
+<ion-content padding class="mainbg">
+  <div class="Loginpage">
+    <form class="app-form" text-center>
+      <img src="http://res.cloudinary.com/dcbi3quoh/image/upload/v1511376115/logo_e9r43d.png" alt="">
+      <ion-list>
+        <ion-item no-padding>
+          <ion-icon name="ios-mail" color="danger" item-start></ion-icon>
+          <ion-input type="text" placeholder="Correo" [(ngModel)]="email" name="email"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+          <ion-icon name="ios-mail" color="danger" item-start></ion-icon>
+          <ion-input type="text" placeholder="Repetir Correo" [(ngModel)]="matchEmail" name="matchEmail"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button ion-button block color="danger" (click)="submit()" [navPush]="'MenuPage'">Recuperar Contraseña</button>
+
+      <div class="option-sign">
+        <div class="separator">
+          <hr color="danger">
+        </div>
+        <p class="tes">¿Ya eres un usuario registrado?</p>
+        <h3 class="text-red"><a [navPush]="'LoginPage'">Entrar</a></h3>
+        <div class="separator">
+          <hr color="danger">
+        </div>
+      </div>
+
+    </form>
+  </div>
+</ion-content>

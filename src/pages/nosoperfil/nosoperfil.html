@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+    <ion-buttons end>
+      <button (click)="presentoption($event)" ion-button icon-only>
+         <ion-icon color="light" name="more" class="more-option"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="profile-page">
+  <div class="profile-content" text-center>
+    <div class="img-profile" padding>
+      <img src="assets/images/profile.png">
+      <h3 class="text-red">Sergio R.</h3>
+      <p class="short-descrip" color="lightColor" no-margin>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+      </p>
+      <div class="video">
+
+      </div>
+    </div>
+  </div>
+  <div class="main-detail" padding>
+    <div class="separator">
+      <hr color="danger">
+    </div>
+    <h3 class="main-title text-red">Miembros</h3>
+    <div class="more-story" padding-vertical>
+      <ion-row no-padding>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/010.png">
+          <small>Jacqueline M.</small>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/profile.png">
+          <small>Sergio R.</small>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,4 +1,4 @@
-page-profile {
+page-nosoperfil {
   .toolbar-title, .bar-button {
     color:#fff !important;
 
@@ -31,20 +31,19 @@ page-profile {
           line-height: 1.8rem;
           width: 95%;
           margin: 5px auto;
+          text-align: justify;
         }
+      }
+
+      .video {
+        background-color: #ccc;
+        width: 90%;
+        margin: 0 auto;
+        height: 150px;
+        margin-top: 16px;
       }
     }
 
-    .like-share{
-      border-top: solid #cc0000 4px;
-      background-color: #eee;
-      p {
-        text-align: center;
-        font-weight: bold;
-        margin: 0;
-        font-size: 1.7rem;
-      }
-    }
     .separator hr {
         background-color: #cc0000;
     }
@@ -65,18 +64,12 @@ page-profile {
         }
 
         ion-col {
-          &:nth-child(1), &:nth-child(3) {
+          &:nth-child(1) {
             padding-right: 5px;
           }
 
-          &:nth-child(2), &:nth-child(4) {
+          &:nth-child(2) {
             padding-left: 5px;
-          }
-
-          p {
-            line-height: 1.6rem;
-            color: color($colors,lightColor);
-            font-size: 1.3rem;
           }
         }
       }
@@ -92,45 +85,6 @@ page-profile {
         border: none !important;
       }
 
-      .comments {
-        .item-md {
-          padding: 0;
-          align-items: flex-start;
-
-          h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-
-            span {
-              padding-left: 5px;
-              color: color($colors,lightColor);
-              font-size: 1.3rem;
-              font-weight: normal;
-            }
-          }
-
-          .rate {
-            margin-top: 5px;
-          }
-
-          .icon-md-ratecolor {
-            color: #cc0000 !important;
-          }
-
-          .rate-value {
-            padding-left: 5px;
-            color: color($colors,lightColor);
-          }
-        }
-
-        textarea.text-input {
-          border: 1px solid color($colors , lightColor);
-          padding: 5px 15px;
-          border-radius: 5px;
-          margin: 5px 0;
-          width: 100%;
-        }
-      }
     }
   }
 }

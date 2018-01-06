@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <button ion-button menuToggle="left">
+      <ion-icon name="menu" class="icon"></ion-icon>
+    </button>
+    <ion-title>Nosotros</ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar placeholder='' no-margin></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h3 class="title" no-padding>MIEMBROS</h3>
+
+  <ion-item *ngFor="let member of members" [navPush]="'NosoPerfilPage'">
+    <ion-avatar item-start>
+      <img src={{member.img}}>
+    </ion-avatar>
+    <ion-icon class="right" color="danger" name="ios-arrow-forward"></ion-icon>
+    <h2>{{member.name}}</h2>
+    <p>{{member.txt}}</p>
+  </ion-item>
+
+</ion-content>
+<ion-footer class="bottom-buttons" padding>
+  <ion-row>
+    <ion-col col-6 no-padding><button ion-button block color="danger" [navPush]="'HistoriaPage'">HISTORIA DEL PISCO</button></ion-col>
+    <ion-col col-6 no-padding><button ion-button block color="danger" [navPush]="'ContactPage'">CONTACTANOS</button></ion-col>
+  </ion-row>
+</ion-footer>

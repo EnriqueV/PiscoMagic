@@ -1,0 +1,22 @@
+page-restorepass {
+  .scroll-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 16px !important;
+  }
+
+  .mainbg {
+    background: -webkit-gradient(linear, left top, left bottom, from(#023556), color-stop(46%, #fff), to(#fff));
+    background: linear-gradient(to bottom, #fff 0%, #fff 46%, #fff 100%);
+  }
+
+  .tes {
+    color: #222;
+  }
+  .option-sign a {
+    text-decoration: none;
+    color: #cc0000 !important;
+  }
+  .separator hr {
+      background-color: #cc0000;
+  }
+}

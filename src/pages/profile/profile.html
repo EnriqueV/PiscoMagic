@@ -1,39 +1,66 @@
-<ion-header class="light-header">
-    <ion-navbar color="light">
+<ion-header>
+  <ion-navbar hideBackButton="true">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Perfil</ion-title>
     <ion-buttons end>
-        <button ion-button icon-only  [navPush]="'FollowlistPage'">
-
-        </button>
-        <button ion-button icon-only (click)="changeData()">
-            <ion-icon name="create" *ngIf="isDisabled"></ion-icon>
-            <ion-icon name="checkmark" *ngIf="!isDisabled" class="save_btn"></ion-icon>
-        </button>
+      <button (click)="presentoption($event)" ion-button icon-only>
+         <ion-icon color="light" name="more" class="more-option"></ion-icon>
+      </button>
     </ion-buttons>
-    </ion-navbar>
+  </ion-navbar>
 </ion-header>
 
-
 <ion-content class="profile-page">
-    <div class="profile-content" text-center>
-        <div class="img-profile" padding>
-            <img src="assets/images/profile.png">
-            <ion-input placeholder="Username" type="text" value="Justin Timberlake" disabled="{{isDisabled}}" text-center></ion-input>
-            <ion-input placeholder="E-mail" type="email" value="@Justin Timberlake" disabled="{{isDisabled}}" text-center></ion-input>
-            <p class="short-descrip" color="lightColor" no-margin>Breaking technology news and analysis. The number one guide for all things tech.</p>
-        </div>
-        <!--<ion-row class="follow-num" margin-bottom>
-            <ion-col col-6 no-padding>
-                <p>200<span>Followers</span></p>
-            </ion-col>
-            <ion-col col-6 no-padding>
-                <p>250<span>Following</span></p>
-            </ion-col>
-        </ion-row> -->
+  <div class="profile-content" text-center>
+    <div class="img-profile" padding>
+      <img src="assets/images/profile.png">
+      <h3 class="text-red">Sergio Alonso</h3>
+      <p class="short-descrip" color="lightColor" no-margin>Breaking technology news and analysis. The number one guide for all things tech.</p>
     </div>
+  </div>
+
+  <div class="like-share" padding-horizontal>
+    <p padding-vertical>FAVORITOS</p>
+  </div>
+  <div class="main-detail" padding>
+    <div class="more-story" padding-vertical>
+      <ion-row no-padding>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/cupones/03.jpg">
+          <small>Pisco Sour</small>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/cupones/02.jpg">
+          <small>Arroz con Pollo</small>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/cupones/01.jpeg">
+          <small>Pisqueria Lima</small>
+        </ion-col>
+        <ion-col col-6 no-padding>
+          <img src="assets/images/cupones/04.jpg">
+          <small>Lomo Saltado</small>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="separator">
+      <hr color="danger">
+    </div>
+    <div class="comments" padding-top>
+      <h3 class="main-title text-red">COMENTARIOS</h3>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/images/011.png">
+        </ion-avatar>
+        <h2>Wendy Fernández <span>Hace 3 días</span></h2>
+        <ion-icon class="rate" *ngFor="let icon of icons" [name]="icon" color="ratecolor"></ion-icon>
+        <span class="rate-value">4.6</span>
+        <p>Me encanto...</p>
+      </ion-item>
+      <ion-textarea rows="1" placeholder="escribe tu comentario..."></ion-textarea>
+    </div>
+  </div>
 
 </ion-content>
-
