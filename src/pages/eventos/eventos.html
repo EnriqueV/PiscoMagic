@@ -18,12 +18,12 @@
 <ion-content>
 
   <ion-row class="eventos">
-    <ion-col col-12 *ngFor="let evento of eventos" [style.backgroundImage]=evento.bg (click)="goTo('EventoPage')">
+    <ion-col col-12 *ngFor="let evento of items" [style.backgroundImage]=evento.imageUrl (click)="goTo('EventoPage')">
       <div class="perc">
-        <small>{{evento.fecha}}</small>
+        <small>{{evento.creado}}</small>
       </div>
       <div class="legend">
-        <p>{{evento.txt}}</p>
+        <p>{{evento.titulo}}</p>
         <div class="blank">
           <small>
             <ion-icon color="danger" name="ios-pricetag-outline"></ion-icon> &nbsp;<span color="danger">Precio:</span> {{evento.precio}}

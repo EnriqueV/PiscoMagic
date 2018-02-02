@@ -1,7 +1,13 @@
 <ion-content no-bounce>
   <ion-slides #slides pager>
 
-    <ion-slide class="slide-one"></ion-slide>
+
+    <ion-slide class="last-slide">
+      <br>
+      <br>
+      <button ion-button block color="light" [navPush]="'LoginPage'">Registrarme</button>
+      <h3 style="color:#fff;">Como funciona</h3>
+    </ion-slide>
 
     <ion-slide class="slide-two" [style.background]="'url(assets/images/slide/' + plataforma + '/2.jpg)'"></ion-slide>
 
@@ -12,10 +18,26 @@
     <ion-slide class="slide-five" [style.background]="'url(assets/images/slide/' + plataforma + '/5.jpg)'"></ion-slide>
 
     <ion-slide class="slide-six" [style.background]="'url(assets/images/slide/' + plataforma + '/6.jpg)'"></ion-slide>
+    <ion-slide class="slide-one">
+      <span></span>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
 
-    <ion-slide class="last-slide">
-      <button ion-button block color="light" [navPush]="'LoginPage'">Registrarme</button>
+      <button ion-button block color="light" [navPush]="'LoginPage'">Iniciar</button>
     </ion-slide>
+
 
   </ion-slides>
 </ion-content>

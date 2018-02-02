@@ -18,12 +18,12 @@
 <ion-content>
 
   <ion-row class="cupones">
-    <ion-col col-12 *ngFor="let cupon of cupones" [style.backgroundImage]=cupon.bg (click)="goTo('CuponPage')">
+    <ion-col col-12 *ngFor="let cupon of items" [style.backgroundImage]=cupon.bg (click)="goTo('CuponPage')">
       <div class="perc">
-        <small>{{cupon.desc}}</small>
+        <small>{{cupon.name}}</small>
       </div>
       <div class="legend">
-        <p>{{cupon.txt}}</p>
+        <p>{{cupon.descripcion}}</p>
       </div>
     </ion-col>
   </ion-row>
